@@ -1,0 +1,102 @@
+#! /usr/local/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x7fdb01500c80 .scope module, "binary_to_gray_tb" "binary_to_gray_tb" 2 2;
+ .timescale 0 0;
+v0x7fdb0151b1d0_0 .var "B", 3 0;
+v0x7fdb0151b260_0 .net "G", 3 0, L_0x7fdb0151b9a0;  1 drivers
+S_0x7fdb01500df0 .scope module, "uut" "binary_to_gray" 2 11, 3 1 0, S_0x7fdb01500c80;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "B";
+    .port_info 1 /OUTPUT 4 "G";
+L_0x7fdb0151b410 .functor XOR 1, L_0x7fdb0151b4e0, L_0x7fdb0151b5c0, C4<0>, C4<0>;
+L_0x7fdb0151b720 .functor XOR 1, L_0x7fdb0151b7b0, L_0x7fdb0151b890, C4<0>, C4<0>;
+L_0x7fdb0151bb30 .functor XOR 1, L_0x7fdb0151bbc0, L_0x7fdb0151bce0, C4<0>, C4<0>;
+v0x7fdb015015d0_0 .net "B", 3 0, v0x7fdb0151b1d0_0;  1 drivers
+v0x7fdb0151a980_0 .net "G", 3 0, L_0x7fdb0151b9a0;  alias, 1 drivers
+v0x7fdb0151aa20_0 .net *"_ivl_10", 0 0, L_0x7fdb0151b5c0;  1 drivers
+v0x7fdb0151aad0_0 .net *"_ivl_12", 0 0, L_0x7fdb0151b720;  1 drivers
+v0x7fdb0151ab80_0 .net *"_ivl_15", 0 0, L_0x7fdb0151b7b0;  1 drivers
+v0x7fdb0151ac70_0 .net *"_ivl_17", 0 0, L_0x7fdb0151b890;  1 drivers
+v0x7fdb0151ad20_0 .net *"_ivl_19", 0 0, L_0x7fdb0151bb30;  1 drivers
+v0x7fdb0151add0_0 .net *"_ivl_23", 0 0, L_0x7fdb0151bbc0;  1 drivers
+v0x7fdb0151ae80_0 .net *"_ivl_25", 0 0, L_0x7fdb0151bce0;  1 drivers
+v0x7fdb0151af90_0 .net *"_ivl_3", 0 0, L_0x7fdb0151b310;  1 drivers
+v0x7fdb0151b040_0 .net *"_ivl_5", 0 0, L_0x7fdb0151b410;  1 drivers
+v0x7fdb0151b0f0_0 .net *"_ivl_8", 0 0, L_0x7fdb0151b4e0;  1 drivers
+L_0x7fdb0151b310 .part v0x7fdb0151b1d0_0, 3, 1;
+L_0x7fdb0151b4e0 .part v0x7fdb0151b1d0_0, 3, 1;
+L_0x7fdb0151b5c0 .part v0x7fdb0151b1d0_0, 2, 1;
+L_0x7fdb0151b7b0 .part v0x7fdb0151b1d0_0, 2, 1;
+L_0x7fdb0151b890 .part v0x7fdb0151b1d0_0, 1, 1;
+L_0x7fdb0151b9a0 .concat8 [ 1 1 1 1], L_0x7fdb0151bb30, L_0x7fdb0151b720, L_0x7fdb0151b410, L_0x7fdb0151b310;
+L_0x7fdb0151bbc0 .part v0x7fdb0151b1d0_0, 1, 1;
+L_0x7fdb0151bce0 .part v0x7fdb0151b1d0_0, 0, 1;
+    .scope S_0x7fdb01500c80;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "binary_to_gray.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fdb01500df0 {0 0 0};
+    %vpi_call 2 20 "$monitor", $time, "B=%h,G=%h", v0x7fdb0151b1d0_0, v0x7fdb0151b260_0 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 11, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x7fdb0151b1d0_0, 0, 4;
+    %delay 5, 0;
+    %vpi_call 2 37 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "binary_to_gray_tb.v";
+    "binary_to_gray.v";
